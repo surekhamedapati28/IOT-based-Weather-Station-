@@ -42,7 +42,7 @@ context.verify_mode = ssl.CERT_NONE # CERT_NONE = not verify server/broker cert 
 # context.load_verify_locations('ccertificate.pem') # Load the certificate from path
 
 # mqtt client connect
-client = MQTTClient(client_id=b'tumi_picow', server=config.MQTT_BROKER, port=config.MQTT_PORT,
+client = MQTTClient(client_id=b'Surekha_picow', server=config.MQTT_BROKER, port=config.MQTT_PORT,
                     user=config.MQTT_USER, password=config.MQTT_PWD, ssl=context)
 
 client.connect()
@@ -60,8 +60,8 @@ def publish(mqtt_client, topic, value):
 
 while True:
     # publish as MQTT payload
-    publish(client, 'tumi_picow/temp', str(bmp.temperature))
-    publish(client, 'tumi_picow/pressure', str(bmp.pressure))
+    publish(client, 'Surekha_picow/temp', str(bmp.temperature))
+    publish(client, 'Surekha_picow/pressure', str(bmp.pressure))
 
     # every 2s
     time.sleep_ms(2000)
